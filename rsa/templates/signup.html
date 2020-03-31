@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crypto</title>
+</head>
+<body>
+
+<div style="margin-top: 70px;">
+	<h2>Create your account Here.</h2>
+
+<form action="" method="post">
+{% csrf_token %}
+{{ form.as_p }}   
+
+<input type="submit" value="Submit" />
+
+</form>
+
+	
+	<button><a href="/gen/">Generate Keys</a></button>
+
+
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kamau and sons</title>
+</head>
+<body>
+<p>Karibu tena</p>
+
+{% for mes in mess %}
+<div>
+	<form method="post">
+		{% csrf_token %}
+		<p>Sender: {{ mes.sender.email}}</p>
+<p>Receiver: {{ mes.receiver.email }}</p>
+<textarea rows="10" cols="30" name="tad">{{ mes.Message }} </textarea>
+<textarea rows="10" cols="30" name="pr" placeholder="Enter Private Key"></textarea>
+<button name="de">Decrypt</button>
+	</form>
+
+
+</div>
+{% endfor %}
+<textarea rows="10" cols="30" name="tad" placeholder="Plain Text">{{tf}}</textarea>
+
+</body>
+</html>

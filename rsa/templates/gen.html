@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crypto</title>
+<script src=" {% static 'js/jquery.js' %}"></script>
+</head>
+
+<body>
+	<form method="post">
+	{% csrf_token %}
+
+	
+	<label>
+	Public Key
+</label>
+
+<textarea name="pb" rows="10" cols="30" id="public">{{pb}}</textarea>
+<button id="button1" onclick="copy('#public')">Copy Public</button>
+<label>
+	Private Key
+</label>
+<textarea name="pr" rows="10" cols="30" id="private">{{pr}}</textarea>
+<button id="button2" onclick="copy('#private')">Copy Private</button><br>
+<button name="gen">Generate Keys</button>
+</form>
+
+<script type="text/javascript">
+	function copy(element) {
+		var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val($(element).text()).select();
+		document.execCommand("copy");
+		$temp.remove();
+	}
+		$(document).ready(function(){
+	$("#button1").click(function(event){
+
+event.preventDefault();
+	});
+	$("#button2").click(function(event){
+
+event.preventDefault();
+	});
+
+		});
+	
+	
+</script>
+</body>
+
+</html>
+

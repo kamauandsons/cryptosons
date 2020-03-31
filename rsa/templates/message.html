@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kamau John Chege</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+		<!-- <textarea placeholder="enter your message here" rows="20" cols="50" name="msg">{{d}}</textarea>
+		<textarea placeholder="enter your key here" rows="20" cols="50" name="key"></textarea> -->
+
+		{{form.as_p}}
+
+
+			<button type="submit" name="enc">Encrypt And Send</button>
+
+		
+	</form>
+	
+
+
+</body>
+</html>
