@@ -68,6 +68,7 @@ def meso(request):
     return render(request,'message.html',{'form':form})
 def dec(request):
     mess=Meso.objects.all()
+    tf=""
     if request.method=='POST':
         r=request.POST
         tw=dict(six.iterlists(r))
